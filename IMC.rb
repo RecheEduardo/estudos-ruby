@@ -3,7 +3,7 @@ peso = gets.chomp.to_f
 puts "E qual é sua altura"
 altura = gets.chomp.to_f
 
-imc = peso / (altura * altura)
+imc = (peso / (altura * altura)).round(2)
 
 classificacao = "";
 
@@ -22,5 +22,5 @@ else
     classificacao = "Obesidade Mórbida"
 end
 
-puts "Seu IMC é: #{imc.round(2)}!"
+puts "Seu IMC é: #{imc}!"
 puts "Sua classificação é: #{classificacao}"
