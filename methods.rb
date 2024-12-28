@@ -7,7 +7,7 @@ def revString(string)
     return string[tam - 1] + revString(string.slice(0...-1))
 end
 
-puts revString("teste reverso")
+puts revString("teste reverso") # osrever etset
 
 def sortArray(array)
     i = 0
@@ -24,4 +24,4 @@ def sortArray(array)
     return array
 end
 
-print sortArray(["a" , "z" , "Z" , "A"])
+print sortArray([1,254,24,13,734,14,21,5,2,35,15]) # [1, 2, 5, 13, 14, 15, 21, 24, 35, 254, 734]
