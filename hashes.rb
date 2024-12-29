@@ -22,12 +22,26 @@ puts ""
 puts hash1.has_value?("Eduardo") # retorna true, pois foi declarado o nome Eduardo
 puts ""
 
-hash_array = [hash1, {nome: "João", idade: "35", email: "Joao@gmail.com"}] # array de hashes
+hash3 = {nome: "João", idade: "35", email: "Joao@gmail.com"}
+hash_array = [hash1, hash3] # array de hashes
 
 i = 0
-
 while i < hash_array.length do # loop que percorre todos os elementos do array e imprime seus valores
     puts hash_array[i].values
     puts ""
     i += 1    
+end
+
+puts "============"
+puts ""
+
+for hash in hash_array do # mesma implementação, porem utilizando a estrutura 'for'
+
+    for key,value in hash do # o loop aninhado acessa cada hash e exibe sua chave e valor
+        puts "#{key}: #{value}" # ex: Nome: Eduardo 
+        puts ""
+    end
+
+    puts "============"
+    puts ""
 end
