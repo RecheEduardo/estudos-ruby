@@ -3,48 +3,34 @@
 # e seguro, trazendo vários benefícios para a implementação de um sistema.
 
 class Aluno
-    @nome
-    @idade
+    attr_reader :nome, :idade
 
     # Métodos utilizados para DEFINIR os atributos do objeto
-    def setNome(name)
+    def initialize (name, age)
         @nome = name
-    end
-
-    def setIdade(age)
         @idade = age
     end
 
-    # Métodos utilizados para ACESSAR os atributos do objeto
-    def getNome
-        @nome
-    end
+    # Métodos utilizados para ACESSAR os atributos do objeto | substituido pelo attr_reader
+    # def getNome
+    #     @nome
+    # end
 
-    def getIdade
-        @idade
-    end   
+    # def getIdade
+    #     @idade
+    # end   
 end
 
-# 1 -Criação de novos objetos
-aluno1 = Aluno.new
-aluno2 = Aluno.new
-aluno3 = Aluno.new
-aluno4 = Aluno.new
+# 1 -Criação de novos objetos e utilização do constructor para preencher os objetos criados
+aluno1 = Aluno.new("Eduardo" , 18)
+aluno2 = Aluno.new("João" , 21)
+aluno3 = Aluno.new("Vinicius" , 32)
+aluno4 = Aluno.new("Carla" , 24)
 
-# 2 - Utilizando os métodos para preencher os objetos criados
-aluno1.setNome("Eduardo")
-aluno1.setIdade(18)
-aluno2.setNome("João")
-aluno2.setIdade(21)
-aluno3.setNome("Vinicius")
-aluno3.setIdade(32)
-aluno4.setNome("Carla")
-aluno4.setIdade(24)
-
-# 3 - Alocando os objetos criados num vetor
+# 2 - Alocando os objetos criados num vetor
 sala_de_aula = [aluno1, aluno2, aluno3, aluno4]
 
-# 4 - Acessando dinamicamente os alunos dentro do vetor
+# 3 - Acessando dinamicamente os alunos dentro do vetor
 sala_de_aula.each do | aluno |
-    puts "#{aluno.getNome}, #{aluno.getIdade} anos" # output: Eduardo, 18 anos
+    puts "#{aluno.nome}, #{aluno.idade} anos" # output: Eduardo, 18 anos
 end
