@@ -4,6 +4,10 @@ class Animal
     def initialize(nome)
         @nome = nome
     end
+
+    def acenar
+        "Olá, sou um animal!"
+    end
 end
 
 class Felino < Animal # Felino herda a característica de um animal por ter nome também
@@ -14,8 +18,10 @@ class Felino < Animal # Felino herda a característica de um animal por ter nome
         @porte = porte
     end
 
-    def acenar # Todo felino mia, logo, esse método está disponível para todos
-        "Olá, sou um felino"
+    def acenar 
+        "Olá, sou um felino!"
+        # Primeiro polimorfismo - Felinos também são animais, então acenam como tal!
+        # alterando o método da classe Mãe: Animal
     end
 end
 
@@ -50,9 +56,9 @@ class Gato < Felino
     end
 
     def acenar
-        "Miau! sou um Gato!" 
-        # Como o gato é um felino, ele pode miar! O nome disso é polimorfismo, 
-        # pois ele altera diretamente os métodos de felino.
+        "Miau, sou um Gato!" 
+        # Segundo polimorfismo = Gatos também são felinos, eles dão um miado ao acenar!
+        # Ele faz isso alterando o método da classe Mãe: Felino
     end
 end
 
@@ -72,4 +78,4 @@ gatos.each do | gato |
 end
 puts ""
 
-puts "Oi, eu sou o #{gato2.getApelido}! e como sou um #{gato2.nome}, logo, eu sei fazer isso: #{gato2.acenar}" 
+puts "Oi, eu sou o #{gato2.getApelido}! e como sou um #{gato2.nome}, logo, eu sei fazer isso: '#{gato2.acenar}'" 
