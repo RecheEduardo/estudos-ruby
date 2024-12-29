@@ -40,7 +40,7 @@ puts ""
 for hash in hash_array do # mesma implementação, porem utilizando a estrutura 'for'
 
     for key,value in hash do # o loop aninhado acessa cada hash e exibe sua chave e valor
-        puts "#{key}: #{value}" # ex: Nome: Eduardo 
+        puts "#{key}: #{value}" # output: Nome: Eduardo 
         puts ""
     end
 

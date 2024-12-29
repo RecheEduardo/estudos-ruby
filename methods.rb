@@ -1,15 +1,15 @@
-def revString(string)
+def revString string
     return "" if string.length == 0
     return string if string.length == 1
 
     tam = string.length
 
-    return string[tam - 1] + revString(string.slice(0...-1))
+    string[tam - 1] + revString(string.slice(0...-1))
 end
 
-puts revString("teste reverso") # osrever etset
+puts revString "teste reverso" # output: osrever etset
 
-def sortArray(array)
+def sortArray array
     i = 0
     while(i < array.length - 1) do
         if(array[i] > array[i+1])
@@ -21,7 +21,7 @@ def sortArray(array)
         i += 1
     end
 
-    return array
+    array
 end
 
-print sortArray([1,254,24,13,734,14,21,5,2,35,15]) # [1, 2, 5, 13, 14, 15, 21, 24, 35, 254, 734]
+print sortArray [1,254,24,13,734,14,21,5,2,35,15] # output: [1, 2, 5, 13, 14, 15, 21, 24, 35, 254, 734]

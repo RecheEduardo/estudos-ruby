@@ -22,5 +22,5 @@ else
     classificacao = "Obesidade Mórbida"
 end
 
-puts "Seu IMC é: #{imc}!" # Ex -> Peso: 85 | Altura: 1.82 | imc: 85 / (1.82)² = 25.66
-puts "Sua classificação é: #{classificacao}" # Sobrepeso
+puts "Seu IMC é: #{imc}!" # ex -> Peso: 85 | Altura: 1.82 | output -> imc: 85 / (1.82)² = 25.66
+puts "Sua classificação é: #{classificacao}" # output: Sobrepeso
