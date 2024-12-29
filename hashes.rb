@@ -1,4 +1,4 @@
-# As hash nada mais são que uma estrutura de dados chave-valor | key-value
+# as hashes nada mais são que uma estrutura de dados chave-valor | key-value
 # bem semelhante ao dicionário em Phyton e Objeto Javascript, mas podendo
 # assumir um comportamento dinâmico, como atributos de funções e implementação
 # dinâmica de novas hashes.
@@ -34,6 +34,8 @@ end
 
 puts "============"
 puts ""
+puts "Usando for:"
+puts ""
 
 for hash in hash_array do # mesma implementação, porem utilizando a estrutura 'for'
 
@@ -45,3 +47,27 @@ for hash in hash_array do # mesma implementação, porem utilizando a estrutura 
     puts "============"
     puts ""
 end
+
+puts "Usando each:"
+puts ""
+
+hash_array.each do | hash |  #  a sintaxe do each evita sobrescrever variáveis pois 
+    for key,value in hash do #  usa toda a incrementação de forma local!
+        puts "#{key}: #{value}"
+        puts ""
+    end
+
+    puts "============"
+    puts ""
+end
+
+familia = ["Maria" , "João", "Bruno", "José", "Valter"]
+
+familia_figueiredo = familia.map do | nome | 
+    nome + " Figueiredo" # incrementa alterações no array sem alterar o original
+end 
+
+puts familia
+puts ""
+puts familia_figueiredo
+puts ""
